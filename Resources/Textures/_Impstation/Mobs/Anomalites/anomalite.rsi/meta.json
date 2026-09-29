@@ -56,6 +56,10 @@
         "directions": 4
       },
       {
+        "name": "anomalycheese",
+        "directions": 4
+      },
+      {
         "name": "blank",
         "directions": 4
       }

@@ -744,3 +744,43 @@
   - type: InnerBodyAnomaly
     injectionProto: AnomalyInjectionSanta
     skipStun: true
+
+# Cheese
+- type: entity
+  parent: [ BaseAnomalite ]
+  id: MobAnomaliteCheese
+  suffix: Cheese
+  description: A mouse like sprite made of cheese. It's warm and gooy to the touch.
+  components:
+  - type: Icon
+    sprite: _Impstation/Mobs/Anomalites/cheese.rsi
+    state: anom
+  - type: Sprite
+    sprite: _Impstation/Mobs/Anomalites/cheese.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: anom
+    noRot: true
+    drawdepth: Mobs
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: anom
+      Dead:
+        Base: dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        slash: 1
+        Blunt: 4
+    angle: 0
+    animation: WeaponArcBite
+  - type: Damageable
+    damageContainer: Biological
+  - type: PointLight
+    radius: 4.0
+    energy: 4.5
+    softness: 10
+    color: "#f0be31"
+  - type: NameIdentifier
+    group: AnomaliteCheese

@@ -127,6 +127,7 @@ ghost-role-information-floralanomalite-name = Floral Anomalite
 ghost-role-information-shadowanomalite-name = Shadow Anomalite
 ghost-role-information-techanomalite-name = Tech Anomalite
 ghost-role-information-santaanomalite-name = Santa Anomalite
+ghost-role-information-cheeseanomalite-name = Cheese Anomalite
 
 ghost-role-information-replicator-name = Replicator
 ghost-role-information-replicator-desc = A pattern coalesces. The Pattern that must repeat. Consume. Repeat.

@@ -69,3 +69,9 @@
   format: name-identifier-anomalite-santa # cl for claus
   minValue: 0
   maxValue: 999
+
+- type: nameIdentifierGroup
+  id: AnomaliteCheese
+  format: name-identifier-anomalite-cheese # cz for cheesy
+  minValue: 0
+  maxValue: 999

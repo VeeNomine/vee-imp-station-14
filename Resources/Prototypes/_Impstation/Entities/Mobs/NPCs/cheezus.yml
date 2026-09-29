@@ -1,0 +1,37 @@
+﻿- type: entity
+  id: MobRatKingCheezus
+  parent: MobRatKing
+  description: You better start praying.
+  suffix: Cheezus
+  components:
+  - type: Sprite
+    sprite: Mobs/Animals/buffrat.rsi
+    scale: 1.2, 1.2
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: regalrat
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
+      state: eyes
+      shader: unshaded
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  - type: MeleeWeapon
+    altDisarm: false
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh2.ogg
+    angle: 0
+    attackRate: 1.2
+    animation: WeaponArcFist
+    damage:
+      types:
+        Blunt: 20
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      200: 0.7
+      250: 0.5
+  - type: GuideHelp
+    guides:
+    - MinorAntagonists

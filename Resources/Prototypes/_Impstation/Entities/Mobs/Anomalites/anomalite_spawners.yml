@@ -296,3 +296,27 @@
       - state: green
       - sprite: _Impstation/Mobs/Anomalites/anomalite.rsi
         state: anomalysanta
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnPointGhostAnomaliteCheese
+  name: anomalite spawn point
+  suffix: Cheese
+  categories: [ DoNotMap ]
+  components:
+  - type: GhostRole
+    name: ghost-role-information-cheeseanomalite-name
+    description: ghost-role-information-anomalite-description
+    rules: ghost-role-information-familiar-anomalite-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+    raffle:
+      settings: short
+  - type: GhostRoleMobSpawner
+    prototype: MobAnomaliteCheese
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+    - state: green
+    - sprite: _Impstation/Mobs/Anomalites/anomalite.rsi
+      state: anomalycheese

@@ -1,0 +1,39 @@
+﻿# Inert cores
+
+- type: entity
+  parent: BaseAnomalyInertCore
+  id: AnomalyCoreCheeseInert
+  suffix: Cheese, Inert
+  components:
+  - type: Sprite
+    sprite: _Impstation/Structures/Specific/Anomalies/Cores/cheese_core.rsi
+    layers:
+    - state: core
+    - state: pulse
+      visible: false
+      map: ["decay"]
+  - type: PointLight
+    radius: 1.5
+    energy: 3.5
+    color: "#5ca8cb"
+    castShadows: false
+
+- type: entity
+  parent: BaseAnomalyCore
+  id: AnomalyCoreCheese
+  suffix: Cheese
+  components:
+  - type: Sprite
+    sprite: _Impstation/Structures/Specific/Anomalies/Cores/cheese_core.rsi
+    layers:
+    - state: core
+    - state: pulse
+      visible: true
+  - type: PointLight
+    radius: 1.5
+    energy: 3.5
+    color: "#5ca8cb"
+    castShadows: false
+  - type: Summonable # imp
+    requiresBibleUser: false
+    specialItem: SpawnPointGhostAnomaliteCheese

@@ -32,3 +32,53 @@
         maxRange: 4.5
       spawns:
       - MobAugury
+
+- type: entity
+  id: AnomalyCheese
+  parent: BaseAnomaly
+  abstract: false
+  suffix: Cheese
+  components:
+  - type: Anomaly
+    corePrototype: AnomalyCoreCheese
+    minPulseLength: 120
+    maxPulseLength: 200
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyRockSupercritical
+  - type: Sprite
+    sprite: _Impstation/Structures/Specific/Anomalies/cheese_anom.rsi
+    layers:
+    - state: anom7
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: anom7-pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: PointLight
+    radius: 2.0
+    energy: 7.5
+    color: "#f0be31"
+    castShadows: false
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnSuperCritical: true
+        minAmount: 4
+        maxAmount: 8
+      spawns:
+      - MobMouse
+    - settings:
+        spawnOnPulse: false
+        spawnOnSuperCritical: true
+      spawns:
+      - MobRatKingBuff
+  - type: WallSpawnAnomaly #imp
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: AsteroidRock
