@@ -1312,13 +1312,16 @@
       - ReagentId: Blood
         Quantity: 300
     # if you fuck with the gorilla he will harambe you
+    # imp start // I fucked with the gorilla
   - type: MeleeWeapon
     soundHit:
-      collection: Punch
+      path: /Audio/_Impstation/Items/Coconut/bonk.ogg
     damage:
       types:
         Blunt: 20
-    animation: WeaponArcFist
+    wideAnimation : WeaponArcSmash
+    altDisarm: false
+    # imp end
   - type: NPCRetaliation
   - type: FactionException
   - type: NpcFactionMember

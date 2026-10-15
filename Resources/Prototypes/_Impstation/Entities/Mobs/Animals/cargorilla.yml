@@ -52,12 +52,13 @@
     # modified punch damage
   - type: MeleeWeapon
     soundHit:
-      collection: Punch
+      path: /Audio/_Impstation/Items/Coconut/bonk.ogg
     damage:
       types:
         Blunt: 12
         Structural: 8
-    animation: WeaponArcFist
+    wideAnimation: WeaponArcSmash
+    altDisarm: false
 
 - type: entity
   parent: BaseMobCargorilla
